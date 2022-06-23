@@ -9,4 +9,13 @@ const jump = () => {
     }, 500);       
 };
 
+const loopgame = setInterval(() => {
+    pipe.style.animation = "none";
+    pipe.style.left = `${pipePosition}px`;
+
+    mario.style.animation = "none";
+    mario.style.bottom = `${marioPosition}px`;
+}
+);
+
 document.addEventListener("keydown", jump);
